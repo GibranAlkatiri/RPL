@@ -1,0 +1,121 @@
+:root {
+  --primary: #8b3513;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid #772809;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #fff;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/restaurant-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 8%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.hero .content {
+  padding: 1.5rem 5%;
+  max-width: 60rem;
+  margin-top: -90px;
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  color: blanchedalmond;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  margin-top: -50px;
+}
+
+.hero .content p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: lightgoldenrodyellow;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  margin-top: 2px;
+}
+
+.hero .content .login {
+  margin: 1rem;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  margin-left: 2rem;
+  margin-top: 5rem;
+  border-radius: 2rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 55%;
+  }
+}
